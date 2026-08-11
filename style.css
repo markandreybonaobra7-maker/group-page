@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    min-height: 100vh;
+    padding: 35px 45px;
+    font-family: Arial, sans-serif;
+}
+/* TITLE */
+.title {
+    text-align: center;
+    color: white;
+    margin-bottom: 35px;
+}
+
+.title h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.title p {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px 18px;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* CARD */
+.member {
+    background: #202a3a;
+    border: 1px solid #465064;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+/* IMAGE */
+.member img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+/* INFORMATION */
+.member-info {
+    padding: 14px 15px 16px;
+}
+
+/* NAME */
+.member .name {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 8px;
+}
+
+/* OTHER INFORMATION */
+.member .info {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-top: 3px;
+}
+
+
+/* SECOND ROW */
+.member:nth-child(5),
+.member:nth-child(6),
+.member:nth-child(7) {
+    transform: translateX(50%);
+}
+
+
+/* TABLET */
+@media (max-width: 900px) {
+
+    body {
+        padding: 30px 25px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .member:nth-child(5),
+    .member:nth-child(6),
+    .member:nth-child(7) {
+        transform: none;
+    }
+}
+
+
+/* PHONE */
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 15px;
+    }
+
+    .title h1 {
+        font-size: 25px;
+    }
+
+    .title p {
+        font-size: 13px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .member:nth-child(5),
+    .member:nth-child(6),
+    .member:nth-child(7) {
+        transform: none;
+    }
+
+    .member img {
+        height: 220px;
+    }
+
+}
