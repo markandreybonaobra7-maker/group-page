@@ -15,10 +15,11 @@ body {
     padding: 35px 45px;
     font-family: Arial, sans-serif;
 }
+
 /* TITLE */
 .title {
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     margin-bottom: 35px;
 }
 
@@ -44,8 +45,8 @@ body {
 
 /* CARD */
 .member {
-    background: #202a3a;
-    border: 1px solid #465064;
+    background: #1f6df5;
+    border: 1px solid #ffffff;
     border-radius: 16px;
     overflow: hidden;
     display: flex;
@@ -83,14 +84,8 @@ body {
     margin-top: 3px;
 }
 
-
 /* SECOND ROW */
-.member:nth-child(5),
-.member:nth-child(6),
-.member:nth-child(7) {
-    transform: translateX(50%);
-}
-
+/* Tinanggal ang translateX para walang overlap */
 
 /* TABLET */
 @media (max-width: 900px) {
@@ -103,13 +98,7 @@ body {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .member:nth-child(5),
-    .member:nth-child(6),
-    .member:nth-child(7) {
-        transform: none;
-    }
 }
-
 
 /* PHONE */
 @media (max-width: 600px) {
@@ -129,12 +118,6 @@ body {
     .grid {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-
-    .member:nth-child(5),
-    .member:nth-child(6),
-    .member:nth-child(7) {
-        transform: none;
     }
 
     .member img {
